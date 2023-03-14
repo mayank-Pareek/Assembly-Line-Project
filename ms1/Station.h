@@ -1,3 +1,16 @@
+/*
+*****************************************************************************
+                        Project - Milestone 1
+Full Name  : Mayank Kumar
+Student ID#: 145998217
+Email      : mkumar87@myseneca.ca
+Date       : 14 March 2022
+
+Authenticity Declaration:
+I confirm that I am the only author of this file and
+the content was created entirely by me.
+*****************************************************************************
+*/
 #ifndef SDDS_STATION_H
 #define SDDS_STATION_H
 #include <string>

@@ -1,3 +1,16 @@
+/*
+*****************************************************************************
+                        Project - Milestone 1
+Full Name  : Mayank Kumar
+Student ID#: 145998217
+Email      : mkumar87@myseneca.ca
+Date       : 14 March 2022
+
+Authenticity Declaration:
+I confirm that I am the only author of this file and 
+the content was created entirely by me.
+*****************************************************************************
+*/
 #include <iomanip>
 #include "Station.h"
 #include "Utilities.h"
@@ -15,8 +28,8 @@ namespace sdds {
         m_itemName = util.extractToken(str, next_pos, more);
         m_serialNumber = stoi(util.extractToken(str, next_pos, more));
         m_quantity = stoi(util.extractToken(str, next_pos, more));
-        m_desc = util.extractToken(str, next_pos, more);
         m_widthField = std::max(m_widthField, util.getFieldWidth());
+        m_desc = util.extractToken(str, next_pos, more);
     }
 
     // Returns the name of the current Station object
@@ -43,12 +56,13 @@ namespace sdds {
 
     // Inserts information about the current object into stream os
     void Station::display(std::ostream& os, bool full) const {
-        os << "[" << std::setw(3) << std::setfill('0') << m_id << "] Item: ";
-        os << std::setw(m_widthField) << std::left << m_itemName;
-        os << " [" << std::setw(6) << std::setfill('0') << m_serialNumber << "]";
+        os << std::setfill('0') << std::right << std::setw(3) << m_id;
+        os << " | " << std::setfill(' ') << std::left << std::setw(m_widthField+1) << m_itemName;
+        os << " | " << std::right << std::setfill('0') << std::setw(6) << m_serialNumber;
+        os << " | ";
         if (full) {
-            os << " Quantity: " << std::setw(4) << std::left << m_quantity;
-            os << " Description: " << m_desc;
+            os << std::right << std::setw(4) << std::setfill(' ') << m_quantity;
+            os << " | " << m_desc;
         }
         os << std::endl;
     }
