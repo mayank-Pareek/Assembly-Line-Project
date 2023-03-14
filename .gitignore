@@ -1,3 +1,10 @@
 *.vs
 *.vcxproj*
 *.sln
+*.log
+*.exe*
+*.ilk
+*.obj
+*.tlog
+*.pdb
+*.idb

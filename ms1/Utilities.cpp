@@ -2,10 +2,10 @@
 #include "Utilities.h"
 
 namespace sdds {
-    Utilities::Utilities() {
+    /*Utilities::Utilities() {
         m_delimiter = ',';
-    }
-    /*char Utilities::m_delimiter = ',';*/
+    }*/
+    char Utilities::m_delimiter = ',';
 
     void Utilities::setFieldWidth(size_t newWidth) {
         m_widthField = newWidth;
