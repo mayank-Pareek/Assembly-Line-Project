@@ -1,9 +1,3 @@
-// Final Project
-// Milestone 3
-// ms3_prof.cpp
-// Winter 2021
-// Chris Szalwinski
-
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -26,7 +20,6 @@ template<typename T>
 static void loadFromFile(const char*, vector<T>&);
 template<typename T>
 static void loadFromFile(const char*, vector<T*>&);
-
 
 int main(int argc, char** argv)
 {
@@ -74,7 +67,6 @@ int main(int argc, char** argv)
 		cout << "getQuantity(): " << theStations[0]->getQuantity() << endl;
 		cout << endl << endl;
 
-
 		loadFromFile<CustomerOrder>(argv[3], theOrders);
 
 		cout << "========================================" << endl;
@@ -104,7 +96,7 @@ int main(int argc, char** argv)
 		cout << "=           Filling Orders             =" << endl;
 		cout << "========================================" << endl;
 		//run the assembly line until all orders processed
-		while (!lm.run(cout));		
+		while (!lm.run(cout));
 		cout << endl << endl;
 	}
 	catch (const string& msg) {
