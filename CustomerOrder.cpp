@@ -1,16 +1,3 @@
-/*
-*****************************************************************************
-						Project - Milestone 3
-Full Name  : Mayank Kumar
-Student ID#: 145998217
-Email      : mkumar87@myseneca.ca
-Date       : 08 April 2023
-
-Authenticity Declaration:
-I confirm that I am the only author of this file and
-the content was created entirely by me.
-*****************************************************************************
-*/
 #include "CustomerOrder.h"
 #include <iomanip>
 
